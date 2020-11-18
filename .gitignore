@@ -4,6 +4,7 @@ node_modules/
 dist
 yarn.lock
 yarn-error.log
+.eslintcache
 
 # yarn v2
 .yarn/*
