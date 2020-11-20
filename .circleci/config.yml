@@ -1,0 +1,53 @@
+version: 2.1
+orbs:
+  node: circleci/node@4.1.0
+
+defaults: &defaults
+  working_directory: ~/repo
+  executor:
+    name: node/default
+
+jobs:
+  test:
+    <<: *defaults
+    steps:
+      - checkout
+      - run:
+          name: Install Dependencies
+          command: yarn install --immutable
+      - run:
+          command: yarn test
+          name: Run YARN tests
+      - persist_to_workspace:
+          root: ~/repo
+          paths: .
+  npm:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/repo
+      - run:
+          name: Build
+          command: yarn build:ci
+      - run:
+          name: Authenticate with registry
+          command: cat ../.yarnrc.yml
+      - run:
+          name: Publish package
+          command: yarn npm whoami
+workflows:
+  test-and-deploy:
+    jobs:
+      - test:
+          filters: # required since `npm` has tag filters AND requires `test`
+            tags:
+              only: /.*/
+      - npm:
+          filters:
+            tags:
+              only: /^v?\d+.\d+.\d+$/
+            branches:
+              ignore: /.*/
+          context: publish
+          requires:
+            - test
