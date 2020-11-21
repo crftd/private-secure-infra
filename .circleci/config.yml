@@ -27,6 +27,9 @@ jobs:
       - attach_workspace:
           at: ~/repo
       - run:
+          name: Restore .yarnrc.yml
+          command: mv .yarnrc.ci.yml .yarnrc.yml
+      - run:
           name: Build
           command: yarn build:ci
       - run:

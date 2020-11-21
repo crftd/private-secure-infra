@@ -22,6 +22,10 @@ npm i -g yarn
 
 Since this repo is using [Zero-Installs](https://yarnpkg.com/features/zero-installs) no further setup is required.
 
+#### Notes
+
+Always make sure that .yarmrc.yml and .yarnrc.ci.yml are in sync. (yarnPath is identical in both files)
+
 ## Clone and Install dependencies
 
 ```bash

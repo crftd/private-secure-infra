@@ -1,0 +1,4 @@
+yarnPath: .yarn/releases/yarn-sources.cjs
+npmRegistries:
+  "https://registry.yarnpkg.com":
+    npmAuthToken: ${NPM_TOKEN}
