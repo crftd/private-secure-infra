@@ -11,7 +11,9 @@ const isProd = nodeEnv === 'production';
 
 const isRunningOnCi = process.env.CI || false;
 
-const plugins = [];
+const plugins = [
+  new webpack.BannerPlugin({ banner: "#!/usr/bin/env node", raw: true }),
+];
 
 if (!isRunningOnCi) plugins.push(new BundleAnalyzerPlugin());
 

@@ -52,8 +52,8 @@
     "lint": "eslint ./src --ext .js,.jsx,.ts,.tsx",
     "test": "jest",
     "build:ci": "CI=true yarn build",
-    "build:dev": "NODE_ENV=development webpack-cli --mode=development",
-    "build": "NODE_ENV=production webpack-cli --mode=production"
+    "build:dev": "NODE_ENV=development webpack-cli --mode=development && chmod a+x dist/main.js",
+    "build": "NODE_ENV=production webpack-cli --mode=production && chmod a+x dist/main.js"
   },
   "husky": {
     "hooks": {
