@@ -16,7 +16,7 @@ const plugins = [];
 if (!isRunningOnCi) plugins.push(new BundleAnalyzerPlugin());
 
 const config = {
-  devtool: isProd ? '' : 'eval-source-map',
+  devtool: isProd ? false : 'eval-source-map',
   context: sourcePath,
   entry: {
     bundle: './main.ts',
