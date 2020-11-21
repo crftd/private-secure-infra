@@ -33,9 +33,6 @@ jobs:
           name: Build
           command: yarn build:ci
       - run:
-          name: Authenticate with registry
-          command: yarn npm whoami
-      - run:
           name: Publish package
           command: yarn npm publish
 workflows:
