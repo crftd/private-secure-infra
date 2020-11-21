@@ -31,3 +31,12 @@ git clone git@github.com:hex22a-streaming/private-secure-infra.git && cd private
 # Install dependencies
 yarn install
 ```
+
+## IDE integration
+
+See yarn's [Editor SDKs] page (https://yarnpkg.com/getting-started/editor-sdks)
+
+```bash
+# How to add VSCode integration
+yarn dlx @yarnpkg/pnpify --sdk vscode
+```

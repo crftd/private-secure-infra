@@ -1,5 +1,7 @@
 {
     "compilerOptions": {
+      // external types (@types/node)
+      "types": ["jest", "node"],
       // Target latest version of ECMAScript.
       "target": "esnext",
       // Search under node_modules for non-relative imports.
