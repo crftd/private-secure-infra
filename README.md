@@ -13,6 +13,15 @@ The purpose of this project is to make it easy for non-technical person to stand
 ## How to use PSI
 
 ```bash
+# output current version
+psi -v
+
+# output help page
+psi help
+
+# output help page for command
+psi <command> help
+
 # sudo code
 psi login aws
 
