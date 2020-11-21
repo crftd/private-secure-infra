@@ -1,0 +1,32 @@
+# Editors
+.idea/
+.vscode/
+.editorconfig
+
+# Code style
+.eslintrc
+.prettierrc.json
+.prettierignore
+.travis.yml
+jest-config.json
+
+# Build stage
+yarn.lock
+coverage
+/npm-debug.log
+/coverage/
+/node_modules/
+.babelrc
+webpack.config.js
+.npmignore
+.yarn
+.circleci
+.github
+.gitignore
+.gitattributes
+.pnp.js
+.yarnrc.yml
+
+# Source / custom
+/src/
+tsconfig.json

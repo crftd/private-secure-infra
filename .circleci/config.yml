@@ -31,7 +31,7 @@ jobs:
           command: yarn build:ci
       - run:
           name: Authenticate with registry
-          command: cat ../.yarnrc.yml
+          command: yarn npm login
       - run:
           name: Publish package
           command: yarn npm whoami

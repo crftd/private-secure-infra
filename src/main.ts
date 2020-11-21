@@ -3,3 +3,7 @@ export default class Main {
     return 1;
   }
 }
+
+const main = new Main();
+
+console.log(`Hello from script, Foo: ${main.foo()}`);
