@@ -1,5 +1,5 @@
 export default class Main {
   foo() {
-    throw new Error('Not implemented');
+    return 1;
   }
 }
