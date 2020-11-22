@@ -1,9 +1,6 @@
-export default class Main {
-  foo() {
-    return 1;
-  }
-}
+import { Command } from 'commander';
 
-const main = new Main();
+const program = new Command();
 
-console.log(`Hello from script, Foo: ${main.foo()}`);
+program.parse(process.argv);
+
