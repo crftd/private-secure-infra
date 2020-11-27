@@ -23,14 +23,13 @@ class ParserImpl implements Parser {
 
   initalize(): void {
     this.deps.program
-      .command('clone <source> [destination]')
-      .description('clone a repository into a newly created directory')
+      .command('aws')
+      .description('a module that provides support for AWS provider')
       .action(this.parseVpnCommand);
   }
 
-  parseVpnCommand(source: string, destination: string): void {
-    console.log(destination);
-    console.log('clone command called');
+  parseVpnCommand(): void {
+    console.log('aws command called');
   }
 
   parse(argv?: string[] | undefined, options?: ParseOptions | undefined): void {

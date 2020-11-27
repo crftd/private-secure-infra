@@ -33,9 +33,8 @@ describe('Parser', () => {
   describe('initalise', () => {
     it('should call builder methods', () => {
       // Arrange
-      const expected_command_description = 'clone <source> [destination]';
-      const expected_descrition = 'clone a repository into a newly created directory';
-      
+      const expected_command_description = 'aws';
+      const expected_descrition = 'a module that provides support for AWS provider';
 
       const mockCommand = new MockCommand() as MockCommand;
       const MockCreateCommand = createMock<CommandConstructor>();
