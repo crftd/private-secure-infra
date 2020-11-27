@@ -13,14 +13,16 @@ class ParserImpl implements Parser {
   }
 
   private constructor() {
-    this.deps = new Map();
+    this.deps = {
+      program: null,
+    };
     return this;
   }
 
-  deps: Map<string, any>;
+  deps: Record<'program', any>;
 
   initalize(): void {
-    this.deps.get('program')
+    this.deps.program
       .command('clone <source> [destination]')
       .description('clone a repository into a newly created directory')
       .action(this.parseVpnCommand);
@@ -32,7 +34,7 @@ class ParserImpl implements Parser {
   }
 
   parse(argv?: string[] | undefined, options?: ParseOptions | undefined): void {
-    this.deps.get('program').parse(argv, options);
+    this.deps.program.parse(argv, options);
   }
 }
 

@@ -47,7 +47,7 @@ describe('Parser', () => {
 
       const parser: Parser = ParserImpl.getParser();
 
-      parser.deps.set('program', mockCommand);
+      parser.deps.program = mockCommand;
 
       // Act
       parser.initalize();
