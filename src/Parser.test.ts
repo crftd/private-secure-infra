@@ -15,6 +15,7 @@ describe('Parser', () => {
         const actualParser: Parser = ParserImpl.getParser();
         // Assert
         expect(actualParser).not.toBeUndefined();
+        expect(actualParser.deps).not.toBeUndefined();
       });
 
       it('should return same instance if called twice', () => {
@@ -46,13 +47,15 @@ describe('Parser', () => {
 
       const parser: Parser = ParserImpl.getParser();
 
+      parser.deps.set('program', mockCommand);
+
       // Act
-      parser.initalize(mockCommand);
+      parser.initalize();
 
       // Assert
       expect(mockCommand.command).toHaveBeenCalledWith(expected_command_description);
       expect(mockCreateCommand.description).toHaveBeenCalledWith(expected_descrition);
-      expect(mockCreateCommand.action).toHaveBeenCalled();
+      expect(mockCreateCommand.action).toHaveBeenCalledWith(parser.parseVpnCommand);
     });
   });
 });
