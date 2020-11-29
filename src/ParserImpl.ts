@@ -1,6 +1,10 @@
 import { ParseOptions } from 'commander';
 
+import container from './inversify.config';
+import TYPES from './types';
+
 import Parser from './Parser';
+import Commander from './services/Commander';
 
 class ParserImpl implements Parser {
   private static parser: Parser | null = null;
@@ -13,16 +17,13 @@ class ParserImpl implements Parser {
   }
 
   private constructor() {
-    this.deps = {
-      program: null,
-    };
-    return this;
+    this.commander = container.get<Commander>(TYPES.Commander);
   }
 
-  deps: Record<'program', any>;
+  commander: Commander
 
   initalize(): void {
-    this.deps.program
+    this.commander
       .command('aws')
       .description('a module that provides support for AWS provider')
       .action(this.parseVpnCommand);
@@ -33,7 +34,7 @@ class ParserImpl implements Parser {
   }
 
   parse(argv?: string[] | undefined, options?: ParseOptions | undefined): void {
-    this.deps.program.parse(argv, options);
+    this.commander.parse(argv, options);
   }
 }
 

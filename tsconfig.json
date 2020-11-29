@@ -1,7 +1,7 @@
 {
     "compilerOptions": {
       // external types (@types/node)
-      "types": ["jest", "node"],
+      "types": ["jest", "node", "reflect-metadata"],
       // Target latest version of ECMAScript.
       "target": "esnext",
       // Search under node_modules for non-relative imports.
@@ -16,6 +16,9 @@
       "isolatedModules": true,
       // Import non-ES modules as default imports.
       "esModuleInterop": true,
+      "lib": ["es6", "dom"],
+      "experimentalDecorators": true,
+      "emitDecoratorMetadata": true,
       "plugins": [
         { "transform": "ts-auto-mock/transformer", "cacheBetweenTests": false }
       ]

@@ -54,11 +54,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-config-prettier", "virtual:ce92d8d5230fae9e37b4765c3295f1f15a75554b1f43ad3e67b95672020dd1ebf56b7c7cb70eb3fe91afc269bc6688144c71331698cec555fda1d95d6291d4b0#npm:6.15.0"],
             ["eslint-plugin-import", "virtual:ce92d8d5230fae9e37b4765c3295f1f15a75554b1f43ad3e67b95672020dd1ebf56b7c7cb70eb3fe91afc269bc6688144c71331698cec555fda1d95d6291d4b0#npm:2.22.1"],
             ["husky", "npm:4.3.0"],
+            ["inversify", "npm:5.0.1"],
             ["jest", "npm:26.6.3"],
             ["jest-ts-auto-mock", "virtual:ce92d8d5230fae9e37b4765c3295f1f15a75554b1f43ad3e67b95672020dd1ebf56b7c7cb70eb3fe91afc269bc6688144c71331698cec555fda1d95d6291d4b0#npm:1.0.11"],
             ["lint-staged", "npm:10.5.1"],
             ["pnp-webpack-plugin", "npm:1.6.4"],
             ["prettier", "npm:2.1.2"],
+            ["reflect-metadata", "npm:0.1.13"],
             ["ts-auto-mock", "virtual:ce92d8d5230fae9e37b4765c3295f1f15a75554b1f43ad3e67b95672020dd1ebf56b7c7cb70eb3fe91afc269bc6688144c71331698cec555fda1d95d6291d4b0#npm:2.6.5"],
             ["ts-jest", "virtual:ce92d8d5230fae9e37b4765c3295f1f15a75554b1f43ad3e67b95672020dd1ebf56b7c7cb70eb3fe91afc269bc6688144c71331698cec555fda1d95d6291d4b0#npm:26.4.4"],
             ["ts-node", "virtual:ce92d8d5230fae9e37b4765c3295f1f15a75554b1f43ad3e67b95672020dd1ebf56b7c7cb70eb3fe91afc269bc6688144c71331698cec555fda1d95d6291d4b0#npm:9.0.0"],
@@ -6002,6 +6004,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["inversify", [
+        ["npm:5.0.1", {
+          "packageLocation": "./.yarn/cache/inversify-npm-5.0.1-6f6ad10d83-f06e76e4dd.zip/node_modules/inversify/",
+          "packageDependencies": [
+            ["inversify", "npm:5.0.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["ip-regex", [
         ["npm:2.1.0", {
           "packageLocation": "./.yarn/cache/ip-regex-npm-2.1.0-7eb0f6c4ab-2fd2190ada.zip/node_modules/ip-regex/",
@@ -8444,11 +8455,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-config-prettier", "virtual:ce92d8d5230fae9e37b4765c3295f1f15a75554b1f43ad3e67b95672020dd1ebf56b7c7cb70eb3fe91afc269bc6688144c71331698cec555fda1d95d6291d4b0#npm:6.15.0"],
             ["eslint-plugin-import", "virtual:ce92d8d5230fae9e37b4765c3295f1f15a75554b1f43ad3e67b95672020dd1ebf56b7c7cb70eb3fe91afc269bc6688144c71331698cec555fda1d95d6291d4b0#npm:2.22.1"],
             ["husky", "npm:4.3.0"],
+            ["inversify", "npm:5.0.1"],
             ["jest", "npm:26.6.3"],
             ["jest-ts-auto-mock", "virtual:ce92d8d5230fae9e37b4765c3295f1f15a75554b1f43ad3e67b95672020dd1ebf56b7c7cb70eb3fe91afc269bc6688144c71331698cec555fda1d95d6291d4b0#npm:1.0.11"],
             ["lint-staged", "npm:10.5.1"],
             ["pnp-webpack-plugin", "npm:1.6.4"],
             ["prettier", "npm:2.1.2"],
+            ["reflect-metadata", "npm:0.1.13"],
             ["ts-auto-mock", "virtual:ce92d8d5230fae9e37b4765c3295f1f15a75554b1f43ad3e67b95672020dd1ebf56b7c7cb70eb3fe91afc269bc6688144c71331698cec555fda1d95d6291d4b0#npm:2.6.5"],
             ["ts-jest", "virtual:ce92d8d5230fae9e37b4765c3295f1f15a75554b1f43ad3e67b95672020dd1ebf56b7c7cb70eb3fe91afc269bc6688144c71331698cec555fda1d95d6291d4b0#npm:26.4.4"],
             ["ts-node", "virtual:ce92d8d5230fae9e37b4765c3295f1f15a75554b1f43ad3e67b95672020dd1ebf56b7c7cb70eb3fe91afc269bc6688144c71331698cec555fda1d95d6291d4b0#npm:9.0.0"],
@@ -8672,6 +8685,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/reduce-flatten-npm-2.0.0-01bd4936fa-216ce860c7.zip/node_modules/reduce-flatten/",
           "packageDependencies": [
             ["reduce-flatten", "npm:2.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["reflect-metadata", [
+        ["npm:0.1.13", {
+          "packageLocation": "./.yarn/cache/reflect-metadata-npm-0.1.13-c525998e20-629101e6c8.zip/node_modules/reflect-metadata/",
+          "packageDependencies": [
+            ["reflect-metadata", "npm:0.1.13"]
           ],
           "linkType": "HARD",
         }]

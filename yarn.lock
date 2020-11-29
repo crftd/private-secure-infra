@@ -4882,6 +4882,13 @@ fsevents@^2.1.2:
   languageName: node
   linkType: hard
 
+"inversify@npm:^5.0.1":
+  version: 5.0.1
+  resolution: "inversify@npm:5.0.1"
+  checksum: f06e76e4dd149b910f1b32822b63e44c407c5314994ad878cf5020768f13d69d9c4d17a2e70c368b4d8ee2ef5aba8816eed953b0d3152e4a26fd795dd285e25e
+  languageName: node
+  linkType: hard
+
 "ip-regex@npm:^2.1.0":
   version: 2.1.0
   resolution: "ip-regex@npm:2.1.0"
@@ -7102,11 +7109,13 @@ fsevents@^2.1.2:
     eslint-config-prettier: ^6.15.0
     eslint-plugin-import: ^2.22.1
     husky: ^4.3.0
+    inversify: ^5.0.1
     jest: ^26.6.3
     jest-ts-auto-mock: ^1.0.11
     lint-staged: ^10.5.1
     pnp-webpack-plugin: ^1.6.4
     prettier: 2.1.2
+    reflect-metadata: ^0.1.13
     ts-auto-mock: ^2.6.5
     ts-jest: ^26.4.4
     ts-node: ^9.0.0
@@ -7310,6 +7319,13 @@ fsevents@^2.1.2:
   version: 2.0.0
   resolution: "reduce-flatten@npm:2.0.0"
   checksum: 216ce860c78081b83f255cad4d032361677e4aea87dacecd387e62505e1e4a50dd947b3ce9166b70d8b9aaa45215c1b512c518b5384e5067ee7d29011da0efb4
+  languageName: node
+  linkType: hard
+
+"reflect-metadata@npm:^0.1.13":
+  version: 0.1.13
+  resolution: "reflect-metadata@npm:0.1.13"
+  checksum: 629101e6c8b7e0d3166fa51953f908f45b5c73dbaf1375c4f8c3ed62221b870c951343b9b031d0c49957e7262a88020f41be25731ee85b5d779f12c7cec66005
   languageName: node
   linkType: hard
 
