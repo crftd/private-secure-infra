@@ -1,5 +1,6 @@
 const TYPES = {
-  Commander: Symbol('Commander'),
+  Commander: Symbol.for('Commander'),
+  Action: Symbol.for('Action'),
 };
 
 Object.freeze(TYPES);
