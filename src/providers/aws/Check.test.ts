@@ -15,4 +15,13 @@ describe('Check', () => {
       expect(sut.description).toEqual(expected_command_description);
     });
   });
+
+  describe('initialize', () => {
+    it('should add a command to en existing Commander instance', () => {
+      // Arrange
+      // Act
+      
+      // Assert
+    });
+  });
 });

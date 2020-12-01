@@ -22,7 +22,7 @@ class ParserImpl implements Parser {
 
   commander: Commander
 
-  initalize(): void {
+  initialize(): void {
     this.commander
       .command('aws')
       .description('a module that provides support for AWS provider')
