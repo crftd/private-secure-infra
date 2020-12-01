@@ -7,12 +7,9 @@ export const AWS_CONFIGURE_COMMAND = 'configure';
 export const AWS_CONFIGURE_DESCRIPTION = 'sets AWS CLI options';
 
 @injectable()
-class Configure implements Action {
+class Configure extends Action {
   command = AWS_CONFIGURE_COMMAND;
   description = AWS_CONFIGURE_DESCRIPTION;
-  initialize(): void {
-    throw new Error('Not implemented');
-  }
   action(): void {
     throw new Error('Not implemented');
   }

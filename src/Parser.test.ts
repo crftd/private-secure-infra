@@ -2,7 +2,7 @@ import { createMock } from 'ts-auto-mock';
 
 import Commander from './services/Commander';
 import Parser from './Parser';
-import ParserImpl from './ParserImpl';
+import ParserSingleton from './ParserSingleton';
 import mockContainer from './inversify.config';
 
 jest.mock('commander');
@@ -23,7 +23,7 @@ describe('Parser', () => {
       it('should return a Parser instance', () => {
         // Arrange
         // Act
-        const actualParser: Parser = ParserImpl.getParser();
+        const actualParser: Parser = ParserSingleton.getParser();
         // Assert
         expect(actualParser).not.toBeUndefined();
         // expect(actualParser.commander).not.toBeUndefined();
@@ -31,9 +31,9 @@ describe('Parser', () => {
 
       it('should return same instance if called twice', () => {
         // Arrange
-        const expectedParser: Parser = ParserImpl.getParser();
+        const expectedParser: Parser = ParserSingleton.getParser();
         // Act
-        const actualParser: Parser = ParserImpl.getParser();
+        const actualParser: Parser = ParserSingleton.getParser();
         // Assert
         expect(actualParser).not.toBeUndefined();
         expect(actualParser).toBe(expectedParser);
@@ -41,20 +41,20 @@ describe('Parser', () => {
     });
   });
 
-  describe('initalise', () => {
+  describe('initialize', () => {
     it('should call builder methods', () => {
       // Arrange
       const expected_command_description = 'aws';
-      const expected_descrition = 'a module that provides support for AWS provider';
+      const expected_description = 'a module that provides support for AWS provider';
 
-      const parser: Parser = ParserImpl.getParser();
+      const parser: Parser = ParserSingleton.getParser();
 
       // Act
-      parser.initalize();
+      parser.initialize();
 
       // Assert
       expect(mockCommander.command).toHaveBeenCalledWith(expected_command_description);
-      expect(mockCommander.description).toHaveBeenCalledWith(expected_descrition);
+      expect(mockCommander.description).toHaveBeenCalledWith(expected_description);
       expect(mockCommander.action).toHaveBeenCalledWith(parser.parseVpnCommand);
     });
   });

@@ -9,7 +9,6 @@ import Check from './providers/aws/Check';
 import Configure from './providers/aws/Check';
 import Login from './providers/aws/Check';
 
-
 const container = new Container();
 
 container.bind<Commander>(TYPES.Commander).to(CommanderWrapper);

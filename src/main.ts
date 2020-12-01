@@ -1,8 +1,8 @@
-import ParserImpl from './ParserImpl';
+import ParserSingleton from './ParserSingleton';
 
-const parser = ParserImpl.getParser();
+const parser = ParserSingleton.getParser();
 
-parser.initalize();
+parser.initialize();
 
 parser.parse(process.argv);
 
