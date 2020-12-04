@@ -3,11 +3,12 @@ import { createMock } from 'ts-auto-mock';
 import Action from '../Action';
 
 import Aws, { AWS_PROVIDER_COMMAND, AWS_PROVIDER_DESCRIPTION } from './Aws';
+import Check from './Check';
 
 describe('AWS plugin', () => {
-  const mockCheck = createMock<Action>();
+  const mockCheck = createMock<Check>();
   const mockLogin = createMock<Action>();
-  const mockConfigure = createMock<Action>();
+  // const mockConfigure = createMock<Action>();
 
   describe('constructor', () => {
     it('should set command sting and description', () => {
@@ -16,7 +17,7 @@ describe('AWS plugin', () => {
       const expected_command_description = AWS_PROVIDER_DESCRIPTION;
 
       // Act
-      const sut = new Aws(mockCheck, mockConfigure, mockLogin);
+      const sut = new Aws(mockCheck, mockLogin, null);
 
       // Assert
       expect(sut.command).toEqual(expected_command_string);
@@ -26,7 +27,7 @@ describe('AWS plugin', () => {
   describe('initialize', () => {
     it('should pass initialize call to it\'s children', () => {
       // Arrange
-      const sut = new Aws(mockCheck, mockConfigure, mockLogin);
+      const sut = new Aws(mockCheck, mockLogin, null);
 
       // Act
       sut.initialize();
@@ -34,7 +35,7 @@ describe('AWS plugin', () => {
       // Assert
       expect(mockCheck.initialize).toHaveBeenCalled();
       expect(mockLogin.initialize).toHaveBeenCalled();
-      expect(mockConfigure.initialize).toHaveBeenCalled();
+      // expect(mockConfigure.initialize).toHaveBeenCalled();
     });
   });
 });
