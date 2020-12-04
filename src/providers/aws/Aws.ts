@@ -18,9 +18,9 @@ class Aws implements Subcommand {
   description = AWS_PROVIDER_DESCRIPTION;
 
   constructor(
-    @inject(TYPES.Action) check: Action | null,
-    @inject(TYPES.Action) configure: Action | null,
-    @inject(TYPES.Action) login: Action | null,
+    @inject(TYPES.Check) check: Action | null,
+    @inject(TYPES.Configure) configure: Action | null,
+    @inject(TYPES.Login) login: Action | null,
   ) {
     this.check = check;
     this.configure = configure;

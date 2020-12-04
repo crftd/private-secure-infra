@@ -40,22 +40,4 @@ describe('Parser', () => {
       });
     });
   });
-
-  describe('initialize', () => {
-    it('should call builder methods', () => {
-      // Arrange
-      const expected_command_description = 'aws';
-      const expected_description = 'a module that provides support for AWS provider';
-
-      const parser: Parser = ParserSingleton.getParser();
-
-      // Act
-      parser.initialize();
-
-      // Assert
-      expect(mockCommander.command).toHaveBeenCalledWith(expected_command_description);
-      expect(mockCommander.description).toHaveBeenCalledWith(expected_description);
-      expect(mockCommander.action).toHaveBeenCalledWith(parser.parseVpnCommand);
-    });
-  });
 });

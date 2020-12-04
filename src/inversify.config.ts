@@ -12,14 +12,20 @@ import Login from './providers/aws/Check';
 import Subcommand from './providers/Subcommand';
 import Aws from './providers/aws/Aws';
 
+import ProvidersLoader from './providers/ProvidersLoader';
+import ProvidersLoaderImpl from './providers/ProvidersLoaderImpl';
+
 const container = new Container();
 
 container.bind<Commander>(TYPES.Commander).to(CommanderWrapper);
 
-container.bind<Action>(TYPES.Action).to(Check);
-container.bind<Action>(TYPES.Action).to(Configure);
-container.bind<Action>(TYPES.Action).to(Login);
+container.bind<Action>(TYPES.Check).to(Check);
+container.bind<Action>(TYPES.Configure).to(Configure);
+container.bind<Action>(TYPES.Login).to(Login);
 
 container.bind<Subcommand>(TYPES.Subcommand).to(Aws);
+
+container.bind<ProvidersLoader>(TYPES.ProvidersLoader).to(ProvidersLoaderImpl);
+
 
 export default container;

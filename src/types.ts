@@ -6,6 +6,7 @@ const TYPES = {
   Login: Symbol.for('Login'),
   Parser: Symbol.for('Parser'),
   Subcommand: Symbol.for('Subcommand'),
+  ProvidersLoader: Symbol.for('ProvidersLoader'),
 };
 
 Object.freeze(TYPES);

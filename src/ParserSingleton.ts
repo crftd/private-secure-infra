@@ -26,15 +26,6 @@ class ParserSingleton implements Parser {
 
   commander: Commander
 
-  initialize(): void {
-    this.commander
-      .command('aws')
-      .description('a module that provides support for AWS provider')
-      .command('kek [arg]')
-      .description('subcommand')
-      .action(this.parseVpnCommand);
-  }
-
   parseVpnCommand(arg: string): void {
     console.log('aws command called', arg);
   }

@@ -1,7 +1,11 @@
+import { injectable } from 'inversify';
+import 'reflect-metadata';
+
 import Subcommand from './Subcommand';
 
 import ParserSingleton from '../ParserSingleton';
 
+@injectable()
 abstract class Action implements Subcommand {
   abstract command: string
   abstract description: string
