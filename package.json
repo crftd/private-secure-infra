@@ -70,6 +70,6 @@
   "dependencies": {
     "commander": "^6.2.0",
     "inversify": "^5.0.1",
-    "reflect-metadata": "^0.1.13"
+    "reflect-metadata": "^0.1.14"
   }
 }
